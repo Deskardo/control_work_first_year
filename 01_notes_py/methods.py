@@ -6,6 +6,7 @@ date = date.today()
 
 
 def add_note(notes, date):  # добавление заметки
+    ''' Принимает массив заметок и текущую дату, '''
     theme = input('Введите тему заметки: ')
     note = input('Введите тело заметки: ')
     record = {"Дата": date, "Тема": theme, "Заметка": note}
@@ -92,7 +93,14 @@ def delete_note(notes): # удаление данных
     print('Заметка не обнаружена')
     
 def delete_note_by_index(notes): # удаление данных по индексу
-    index = int(input('Введите индекс удаляемой заметки: '))
+    flag = True
+    while flag:
+        try:
+            index = int(input('Введите индекс удаляемой заметки: '))
+            flag = False
+        except ValueError:
+            print('Необходимо ввести число')
+    
     if index < len(notes):
         del notes[index]
         print('Заметка удалена')
