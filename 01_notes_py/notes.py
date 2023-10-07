@@ -1,7 +1,7 @@
 import os
 from methods import *
 
-notes = []    
+notes = []
 
 load_notes(notes)
 
@@ -13,7 +13,7 @@ while True:
     print("4. Поиск заметки по дате")
     print("5. Редактировать заметку")
     print("6. Удалить заметку")
-    print("7. Удаление заметки по индексу")    
+    print("7. Удаление заметки по индексу")
     print("8. Выход")
 
     choice = input("Выберите действие: ")
