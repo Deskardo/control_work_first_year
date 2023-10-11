@@ -9,12 +9,20 @@ import cw_02_toy_store_java.core.Presenter;
 import cw_02_toy_store_java.core.Toy;
 import cw_02_toy_store_java.core.View;
 
+/**
+ * Класс программы собирающий нужные методы
+ * реализуется с помощью конструкции switch-case
+ * 
+ */
 public class App {
     ParametersSetting ps = new ParametersSetting();
     Presenter p = new Presenter();
     View view = new View();
     MyQueue mq = new MyQueue();
 
+    /**
+     * Метод старт для запуска программы, вызывается из класса Program
+     */
     public void start() {
         ArrayList<Toy> toys = new ArrayList<>();
 

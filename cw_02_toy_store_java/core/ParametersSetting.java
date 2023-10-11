@@ -33,7 +33,7 @@ public class ParametersSetting {
      * @return возвращает булево значение
      */
     public boolean isNumber(String string) {
-        String str = "123456789";
+        String str = "0123456789";
         for (char item : string.toCharArray()) {
             if (!str.contains(String.valueOf(item))) {
                 return false;

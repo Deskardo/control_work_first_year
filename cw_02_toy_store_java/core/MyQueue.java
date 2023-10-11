@@ -5,8 +5,17 @@ import java.io.IOException;
 import java.util.PriorityQueue;
 import java.util.Random;
 
+/**
+ * Класс для работы с формируемой очередью
+ */
 public class MyQueue {
 
+    /**
+     * метод возвращает случайный id игрушки в соответствии с частотой выпадения
+     * 
+     * @param queue принимает экземпляр коллекции PriorityQueue
+     * @return возвращает рандомный id игрушки подходящей по частоте выпадения
+     */
     public int get(PriorityQueue<Toy> queue) {
         int totalFrequency = 0;
         for (Toy toy : queue) {
@@ -27,6 +36,12 @@ public class MyQueue {
         return -1; // В случае ошибки
     }
 
+    /**
+     * метод вызывает метод get 10 раз и наполняет файл output сгенерированными id
+     * игрушек
+     * 
+     * @param queue принимает экземпляр коллекции PriorityQueue
+     */
     public void getQueue(PriorityQueue<Toy> queue) {
         try {
             FileWriter writer = new FileWriter("output.txt");
